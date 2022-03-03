@@ -1,0 +1,94 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(156, 173, 199, 0.5);
+}
+
+.modal {
+  position: fixed;
+  top: 125px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 580px;
+  padding: 44px clamp(5px, 3vw, 27px) 40px;
+  background: #fff;
+  z-index: 2000;
+  font-family: 'Roboto', sans-serif;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.modal__close {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
+}
+
+.modal__name {
+  font-size: clamp(24px, 4vw, 30px);
+  font-weight: 500;
+  max-width: 354px;
+}
+
+.table {
+  margin-top: 44px;
+}
+
+.table__item {
+  display: flex;
+  line-height: 30px;
+  margin-top: 8px;
+}
+
+.table__left-col {
+  min-width: 44%;
+  font-size: clamp(14px, 3vw, 16px);
+}
+
+.table__right-col {
+  color: #868b8f;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table__right-col_phone {
+  font-size: 18px;
+}
+
+.modal__info-title {
+  font-size: clamp(14px, 3vw, 16px);
+  font-weight: 400;
+  margin-top: 41px;
+}
+
+.modal__info {
+  color: #868b8f;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10vw);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .modal {
+    width: 95%;
+  }
+}

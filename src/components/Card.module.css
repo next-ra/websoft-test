@@ -1,0 +1,54 @@
+.card {
+  width: 100%;
+
+  max-width: 380px;
+  height: 315px;
+  padding: 34px clamp(10px, 4vw, 27px);
+
+  box-shadow: 3px 14px 32px rgba(177, 185, 197, 0.12);
+  border-radius: 20px;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 2px 14px 32px rgba(176, 73, 212, 0.4);
+}
+
+.card__name {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  /* max-width: 100px; */
+}
+
+.card__link-item {
+  margin-top: 8px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.card__icon {
+  margin-right: 16px;
+}
+
+.card__link {
+  color: #868b8f;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.4s linear;
+}
+
+.card__link:hover {
+  color: #71a5f2;
+}
+
+.card__link_underline {
+  text-decoration: underline;
+  font-size: 14px;
+  /* Некоторые адреса очень длинные */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
